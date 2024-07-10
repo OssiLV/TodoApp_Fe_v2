@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 
@@ -11,7 +12,9 @@ import { initFlowbite } from 'flowbite';
 })
 export class AppComponent implements OnInit {
   title = 'todo_app';
-
+  constructor(private titleService: Title) {
+    titleService.setTitle(this.title);
+  }
   ngOnInit(): void {
     initFlowbite();
   }
