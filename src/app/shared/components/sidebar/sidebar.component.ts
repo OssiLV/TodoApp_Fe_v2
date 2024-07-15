@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
@@ -59,6 +59,7 @@ export class SidebarComponent {
     | 'filters-labels'
     | undefined;
   @Input() countItem: number | undefined;
+  @Output() statusToggleSdebarFromChild = new EventEmitter<boolean>();
 
   statusToggleSidebar = true;
   navItems: INavItem[] = [
@@ -118,5 +119,7 @@ export class SidebarComponent {
 
   toggleSidebar() {
     this.statusToggleSidebar = !this.statusToggleSidebar;
+    this.statusToggleSdebarFromChild.emit(this.statusToggleSidebar);
+    console.log(this.statusToggleSidebar);
   }
 }

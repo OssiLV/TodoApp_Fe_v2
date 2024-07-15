@@ -23,6 +23,7 @@
     "lib": ["ES2022", "dom"],
     "paths": {
       "@pages/*": ["app/pages/*"],
+      "@model-types/*": ["app/shared/types/*"],
       "@core/*": ["app/core/*"],
       "@icons/*": ["app/shared/icons/*"],
       "@components/*": ["app/shared/components/*"]

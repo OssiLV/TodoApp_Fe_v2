@@ -7,10 +7,10 @@
   <ng-icon name="heroBars3CenterLeft" size="18"></ng-icon>
 </button>
 
-<div class="z-50 flex-col antialiased">
+<div class="z-50 flex-col">
   <div
-    [ngClass]="statusToggleSidebar ? '' : ' hidden'"
-    class="w-64 fixed flex flex-col top-0 left-0 bg-primary/20 h-full"
+    class="w-64 fixed flex flex-col top-0 left-0 bg-primary/90 h-full transition-all duration-700"
+    [ngClass]="statusToggleSidebar ? '' : '  hidden'"
   >
     <!-- START HEADER SIDEBAR -->
     <div class="flex items-center justify-between px-4 py-1">
